@@ -43,8 +43,8 @@ app.whenReady().then(() => {
   ])
   
   tray.setContextMenu(contextMenu)
-  tray.setToolTip('NoMusic')
-  tray.setTitle('NoMusic')
+  tray.setToolTip('whitenoise')
+  tray.setTitle('whitenoise')
 
 
   createWindow()

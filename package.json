@@ -1,7 +1,7 @@
 {
-  "name": "my-electron-app",
+  "name": "White Noise Player",
   "version": "1.0.0",
-  "description": "my-electron-app",
+  "description": "White Noise Player",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
