@@ -19,8 +19,7 @@ function createWindow () {
 
 app.whenReady().then(() => {
 
-  const icon = nativeImage.createFromPath('statics/logo.png')
-  tray = new Tray(icon)
+  tray = tray = new Tray(path.join(__dirname, 'logo.png'))
 
   tray.on('click', () => {
     win.show();
