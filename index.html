@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>White Noise Player</title>
+    <style>
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .slider {
+            width: 300px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggle-button">Pause White Noise</button>
+    <input type="range" min="0" max="1" step="0.01" value="1" class="slider" id="volume">
+
+    <audio id="audio" loop>
+        <source src="whitenoise.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        var audio = document.getElementById('audio');
+        var button = document.getElementById('toggle-button');
+        var slider = document.getElementById('volume');
+
+        // Play audio immediately when the page loads
+        window.onload = function() {
+            audio.play();
+        };
+
+        button.addEventListener('click', function() {
+            if(audio.paused){
+                audio.play();
+                button.innerText = "Pause White Noise";
+            }else{
+                audio.pause();
+                button.innerText = "Play White Noise";
+            }
+        });
+
+        slider.addEventListener('input', function() {
+            audio.volume = slider.value;
+        });
+    </script>
+</body>
+</html>
